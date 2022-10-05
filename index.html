@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="fonts.css"> 
+    <link rel="stylesheet" href="navbar.css">
+    <script src="script.js"></script>
+    <script src="fontscript.js"></script>
+    
+</script>
+
+    <style>
+      @media print {
+  body * {
+    visibility: hidden;
+  }
+  #output, #output * {
+    visibility: visible;
+    
+  }
+  #output{
+    position: absolute;
+    left: 0;
+    top: 0;
+  
+  }
+}
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1 style="color: rgba(230, 153, 10, 0.815);">TEXT TO HANDWRITTING</h1>
+    </div>
+
+    
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#Help">Help</a>
+  <a href="#news">Pages</a>
+  <div class="dropdown">
+    <button class="dropbtn">Fonts <i class="fa fa-caret-down"></i></button>
+    <div class="dropdown-content">
+      <a  onclick="fun1()">Shubham</a>
+      <a  onclick="fun2()">Pratiksha</a>
+      <a  onclick="fun3()">Sujit</a>
+      <a  onclick="fun4()">Tejas</a> 
+      <a  onclick="fun5()">Vaibhav</a>
+      <a  onclick="fun6()">Aadesh</a>
+      <a  onclick="fun7()">Amruta</a>
+      <a  onclick="fun8()">Ashok</a>
+      <a  onclick="fun9()">Rohini</a>
+      <a  onclick="fun10()">Ruchita</a>
+      <a  onclick="fun11()">Sanket</a>
+      <a  onclick="fun12()">Santosh</a>
+    </div>
+
+
+  </div> 
+</div>
+    <hr>
+
+    <div class="input">
+
+        <textarea id="myInput" oninput="myFunction()"   placeholder="Write Here...." cols="60" rows="42" oninput="myFunction()"></textarea>
+    </div>
+
+
+
+    <div class="adjust">
+        <h2>Margine Left-Right :</h2>
+        <input type="range"  min="1" max="120" value="24" class="slider" id="plmarg"> 
+        <span id="demo1"> </span>
+
+        <h2>Margine Top-Bottom :</h2>
+            <input type="range"  min="1" max="200" value="22" class="slider" id="pdmarg">
+            <span id="demo2"> </span>
+
+        <h2>Line Spacing :</h2>
+            <input type="range"  min="1" max="100" value="7" class="slider" id="pad"> 
+            <span id="demo3"> </span>
+            
+        <h2>Font Size :</h2>
+        <input type="range"  min="1" max="100" value="16" class="slider" id="fsize">  
+        <span id="demo"> </span>
+         <h2>Text Color & Bold</h2><input  id='clr' type="color" oninput="setcol()">
+
+        <input id="boldd" onclick="text_b()"type="radio"> <br>
+        <br> 
+        
+        <Button onclick="window.print()">Print</Button>
+        <br><br>
+
+
+        <h2>Page upload:</h2>
+        
+    <input type='file' id='getval' name="background-image" /><br/><br/>
+
+</div>
+</div>
+
+    </div>
+
+    <div id="output">
+        <p>Nature is an important and integral part of mankind. It is one of the greatest blessings for human life; however, nowadays humans fail to recognize it as one. Nature has been an inspiration for numerous poets, writers, artists and more of yesteryears. This remarkable creation inspired them to write poems and stories in the glory of it. They truly valued nature which reflects in their works even today. Essentially, nature is everything we are surrounded by like the water we drink, the air we breathe, the sun we soak in, the birds we hear chirping, the moon we gaze at and more. Above all, it is rich and vibrant and consists of both living and non-living things. Therefore, people of the modern age should also learn something from people of yesteryear and start valuing nature before it gets too late.</p>
+    </div>
+
+   
+    <script>
+
+
+      document.getElementById('getval').addEventListener('change', readURL, true);
+  function readURL(){
+     var file = document.getElementById("getval").files[0];
+     var reader = new FileReader();
+     reader.onloadend = function(){
+        document.getElementById('output').style.backgroundImage = "url(" + reader.result + ")";        
+     }
+     if(file){
+        reader.readAsDataURL(file);
+      }else{
+      }
+  }
+
+  
+
+var fslider = document.getElementById("fsize");
+var output = document.getElementById("demo");
+output.innerHTML = fslider.value;
+
+fslider.oninput = function() {
+  output.innerHTML = this.value;
+  document.getElementsByTagName("p")[0].style.fontSize=this.value+"px";
+}
+
+    
+var mslider = document.getElementById("plmarg");
+var output1 = document.getElementById("demo1");
+output1.innerHTML = mslider.value;  
+  
+mslider.oninput = function() {
+  output1.innerHTML = this.value;
+document.getElementsByTagName("p")[0].style.marginLeft =this.value*2+"px";
+
+}
+
+   
+var mdslider = document.getElementById("pdmarg");
+var output2 = document.getElementById("demo2");
+output2.innerHTML = mdslider.value;  
+  
+mdslider.oninput = function() {
+  output2.innerHTML = this.value;
+document.getElementsByTagName("p")[0].style.marginTop=this.value*2+"px";
+
+}
+
+
+var pslider = document.getElementById("pad");
+var output3 = document.getElementById("demo3");
+output3.innerHTML = fslider.value;
+
+pslider.oninput = function() {
+  output3.innerHTML = this.value;
+
+document.getElementsByTagName("p")[0].style.lineHeight= this.value/6;
+
+}
+
+</script>
+    
+
+</body>
+</html>

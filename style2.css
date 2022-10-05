@@ -1,0 +1,99 @@
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  body{
+      background-color: black;
+  }
+  
+  .btn {
+    border: 2px solid white;
+    color: white;
+    border-style: dashed;
+    background-color: black;
+    padding: 8px 20px;
+    font-size: 20px;
+    color: greenyellow;
+    font-weight: bold;
+
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    
+  }
+
+  
+#demo,#demo1,#demo2,#demo3{
+    color: white;
+    font-size: 22px;
+    margin-left: 10px;
+    font-style: italic;
+    font-weight:bolder;
+}
+
+
+
+
+button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+.slidecontainer {
+    width: 300px;
+    
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    width: 220px;
+    height: 8px;
+    background: #000000;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+  
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height:20px;
+    background:  #00ff00;
+    cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 100px;
+    height:100px;
+    background: #04AA6D;
+    cursor: pointer;
+  }

@@ -1,0 +1,108 @@
+.header{
+
+    border: 1px solid #04AA6D;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: whitesmoke;
+}
+
+textarea{   
+  padding: 10px;
+  padding-top: 30px;
+  padding-left: 20px;
+  margin-bottom: 40px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+img{
+  margin: 0;
+  padding: 0;
+  height:700px;
+  width: 480px;
+}   
+
+h2{
+    color: white;
+    font-style: italic;
+    padding: 0;
+    font-size: 20px;
+}
+
+.input{
+    float: left; 
+    margin-top: 40px;
+    margin-left: 40px;
+}
+.adjust{
+    float:left;
+    padding: 0;
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 100px;
+    padding-bottom:  20px;
+    height: 632px;
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
+#output {
+    float: left;
+    height: 700px;
+    width: 480px;
+    width: 550px;
+    height: 779px;
+    padding-left: 0;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; 
+    background-image: url('classmate.jpg');
+    background-repeat: no-repeat;
+    background-size: 550px 779px;
+  
+}
+
+
+p{
+    padding: 0px;
+    font-family: f10;
+    color: #1072c2;
+    margin-left: 63px;
+    margin-top: 80px;
+    font-size: 15px;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    text-align: center;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+  
+body{
+    background-image: url(body.png)
+}
